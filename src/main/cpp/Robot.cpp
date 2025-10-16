@@ -21,6 +21,8 @@ void Robot::RobotInit()
 /// @brief Method is called every robot packet, no matter the mode.
 void Robot::RobotPeriodic()
 {
+    //frc::SmartDashboard::PutString("Debug", "RobotPeriodic");
+
     // Run the command scheduler
     frc2::CommandScheduler::GetInstance().Run();
 
@@ -50,7 +52,7 @@ void Robot::AutonomousInit()
 /// @brief Method is called periodically when the robot is in autonomous mode.
 void Robot::AutonomousPeriodic()
 {
-
+   frc::SmartDashboard::PutString("Debug", "AutonomousPeriodic");
 }
 #pragma endregion
 
@@ -73,7 +75,7 @@ void Robot::TeleopInit()
 /// @brief Method is called periodically when the robot is in tleloperated mode.
 void Robot::TeleopPeriodic()
 {
-
+   frc::SmartDashboard::PutString("Debug", "TeleopPeriodic");
 }
 #pragma endregion
 

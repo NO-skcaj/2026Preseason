@@ -26,6 +26,7 @@
 
 // Commands
 #include "commands/AutonomousDoNothing.h"
+#include "commands/ChassisDrive.h"
 #include "commands/DemoCommand.h"
 
 #include "Constants.h"

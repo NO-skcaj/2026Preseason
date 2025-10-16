@@ -33,9 +33,14 @@ RobotContainer::RobotContainer()
     // Send the autonomous mode chooser to the SmartDashboard
     frc::SmartDashboard::PutData("Autonomous Mode", &m_autonomousChooser);
 
-    // Create a command to set the drivetrain motors to 12 volts and schedule it
+    // Set the demo command as the default command for the drivetrain
+    m_drivetrain.SetDefaultCommand(ChassisDrive(0_V, &m_drivetrain));
+
+    // Create a command to set the drivetrain motors to 12 volts
     DemoCommand *demoCommand = new DemoCommand(12_V, &m_drivetrain);
-    demoCommand->Schedule();
+
+    // Add a button to the SmartDashboard to start the DemoCommand
+    frc::SmartDashboard::PutData("Start DemoCommand", demoCommand);
 }
 #pragma endregion
 
