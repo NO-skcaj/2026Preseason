@@ -28,4 +28,6 @@ class Robot : public frc::TimedRobot
 
         // Instantiate the Robot container and get a pointer to the class
         RobotContainer *m_robotContainer    = RobotContainer::GetInstance();
+
+        int m_testVariable;
 };
